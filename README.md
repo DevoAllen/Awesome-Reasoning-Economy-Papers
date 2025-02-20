@@ -1,4 +1,25 @@
-# A survey of Efficient Thinking for Long Thought Large Language Models
+# A survey of Efficient Thinking for Long Thought Large Language Models： From Decoding
+
+## 备选题目方案
+
+### candidates
+1. Towards Efficient Reasoning in Large Language Models: A Comprehensive Survey of Adaptive Inference Strategies
+   
+2. Thinking Smart, Not Hard: A Review of Computation-Aware Reasoning in Large Language Models
+
+3. Maximizing the Inference Economy: A Review of Computation-Aware Reasoning in Large Language Models
+
+4. Maximizing the Inference Economy: A Survey of Computationally Efficient Reasoning in Large Language Models
+
+5. The Inference Economy of Complex Reasoning: A Systematic Review of Efficient Thinking in Large Language Models
+    
+6. Harnessing the Inference Economy: Efficient Thinking for Large Language Models
+
+### good parts  
+1. Thinking Smart, Not Hard
+2. Inference Economy
+3. Computation-Aware or efficient
+4. Efficient Thinking
 
 
 ## 1. Human Thinking Phenomena 
@@ -16,12 +37,18 @@
 
 ## 4. Why Efficient Thinking?
 
+theory supports
+
 
 ## 5. Adaptive Computation Allocation
 
 
 ## 6. Architecture Methods
-
+1. MLA
+2. MOE
+3. recurrent transformers
+4. reasoning in continuous space
+5. 非自回归解码策略
 
 ## 7. Pruning while Decoding
 
@@ -36,7 +63,7 @@
 
 
 <a href = "https://arxiv.org/abs/2401.10480"> Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning</a>
-
+early stop 的self-consistency，training-free。只要一个窗口里面所有答案都一致，那么后续就不再采样。
 
 
 
@@ -65,7 +92,7 @@
 比较新的一个。prompt告诉token预算，但是精度有损失多。
 
 
-## 10. Multi-agent
+## 10. Compound Inference Systems
 
 **主要思想是大的LLM解决难问题，小的解决简单问题。system 1 & system2**
 
@@ -105,5 +132,8 @@ Long2short
 考虑难度，不是所有的问题best-of-n都能带来更好的性能
 
 
+
 ## Future Directions
+
+
 

@@ -7,7 +7,7 @@
    
 2. Thinking Smart, Not Hard: A Review of Computation-Aware Reasoning in Large Language Models
 
-3. Maximizing the Inference Economy: A Review of Computation-Aware Reasoning in Large Language Models
+3. The Inference Economy: A Review of Computation-Aware Reasoning in Large Language Models
 
 4. Maximizing the Inference Economy: A Survey of Computationally Efficient Reasoning in Large Language Models
 
@@ -15,32 +15,82 @@
     
 6. Harnessing the Inference Economy: Efficient Thinking for Large Language Models
 
+7. Efficient Reasoning in the Inference Economy: Adaptive Computation for Large Language Models
+
+8. The Inference Economy: Adaptive Strategies for Efficient Reasoning in Large Language Models
+
 ### good parts  
 1. Thinking Smart, Not Hard
 2. Inference Economy
 3. Computation-Aware or efficient
 4. Efficient Thinking
+5. optimal
 
 
-## 1. Human Thinking Phenomena 
-### 1.1 System 1 & System 2
+## 1. Test-time Scaling
+
+### 1.1 Benefits of TTS
+test-time scaling 带来了明显的性能增长，无需训练。
+Recent advances in inference-time techniques demonstrate the potential to enhance LLM reasoning without additional training by exploring intermediate steps during inference. 
+test-time 方法
+- Sequential Methods
+    - critique and refine
+    - Other prompting methods：
+      - tot
+      - got
+      - 
+
+- Parallel Methods
+    - Beam Search
+    - Best-of-N
+    - Self-consistency
+
+提高模型精度。
+**paper（1）性能提升**
+
+### 1.2 Why Efficient Thinking?
+但是，要付出大量的算力。
+**paper（2）算力开销计算**
+
+尤其是，**paper（3）系列发现模型推理存在算力分配不合理**，即在固定算力下，简单题目，算力分配过多，造成算力浪费；困难题目，算力分配不足，导致模型无法充分探索解题可能性，影响性能。
+
+**theory supports: Human Thinking Paradigm (Dual-Process Theory - System 1 & System 2)**
+
+因此，一些paper希望动态分配算力，实现精度提升的同时，尽可能节省算力。
+意义：
+- 吞吐量
+- 经济
+- carbon footprint
+
+## Adaptive Computation Methods分类
+
+
+- Mid/During decoding 在解码过程中动态调整，防止算力浪费。
+  - Pruning while Decoding
+  - Dynamically Adjusting Decoding Hypeparameters
+
+- Before/after decoding， 在解码之前根据prompt分配算力，或者解码之后根据模型表现决定后续运算。
+  - Early Stopping （after）
+  - Budget Prediction & Allocation （before）
+
+- Architecture Methods
+  - Implicit Inference
+  - recurrent transformers
+  - 非自回归解码策略
+
+*System-1/2 ？*
 
 
 
-## 2. Source of Token Waste
-
-### 2.1 Length-bias during RL
+## Pruning while Decoding
 
 
-## 3. Test-time Scaling
+## implicit inference
+https://arxiv.org/pdf/2311.01460
 
+https://arxiv.org/pdf/2405.14838v1
 
-## 4. Why Efficient Thinking?
-
-theory supports
-
-
-## 5. Adaptive Computation Allocation
+https://arxiv.org/pdf/2412.06769
 
 
 ## 6. Architecture Methods
@@ -50,7 +100,6 @@ theory supports
 4. reasoning in continuous space
 5. 非自回归解码策略
 
-## 7. Pruning while Decoding
 
 
 ## 8. Early Stop
@@ -81,7 +130,6 @@ early stop 的self-consistency，training-free。只要一个窗口里面所有�
 使用线性规划，指定算力和请求后，找出最大奖励的算力分配
 
 
-
 <a href = "https://arxiv.org/abs/2408.13457">Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning</a>
 
 **根据难度**，调整不同问题的self-consistency窗口大小
@@ -92,7 +140,7 @@ early stop 的self-consistency，training-free。只要一个窗口里面所有�
 比较新的一个。prompt告诉token预算，但是精度有损失多。
 
 
-## 10. Compound Inference Systems
+## 10. System1/2协作框架 Dual-Process Theory (System 1/2)
 
 **主要思想是大的LLM解决难问题，小的解决简单问题。system 1 & system2**
 
@@ -113,7 +161,6 @@ early stop 的self-consistency，training-free。只要一个窗口里面所有�
 Length-bias等系列算法
 
 <a href = "https://arxiv.org/abs/2405.14734">SimPO: Simple Preference Optimization with a Reference-Free Reward</a>
-
 
 Long2short
 

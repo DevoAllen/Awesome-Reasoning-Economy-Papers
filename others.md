@@ -4,6 +4,7 @@
 1. on-line or off-line?
 2. token-level/task-level
 3. act on which stage? (prompt, decoding, post-process)
+4. sequential / parallel inference-time methods
 
 
 ### 分析角度

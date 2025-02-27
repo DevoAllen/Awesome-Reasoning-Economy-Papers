@@ -49,8 +49,13 @@ test-time 方法
 **paper（1）性能提升**
 
 ### 1.2 Why Efficient Thinking?
-但是，要付出大量的算力。
+TTS方法要付出大量的算力，但很多时候付出的算力不一定带来性能提升。
 **paper（2）算力开销计算**
+**paper（4）模型能力分析，能力内，能力间，能力外**
+
+算力浪费方式
+（1）
+（2）
 
 尤其是，**paper（3）系列发现模型推理存在算力分配不合理**，即在固定算力下，简单题目，算力分配过多，造成算力浪费；困难题目，算力分配不足，导致模型无法充分探索解题可能性，影响性能。
 
@@ -64,22 +69,44 @@ test-time 方法
 
 ## Adaptive Computation Methods分类
 
+按照动机分类
+是否用prior知识？
+
+分小类别优势 / 劣势
+
 
 - Mid/During decoding 在解码过程中动态调整，防止算力浪费。
   - Pruning while Decoding
   - Dynamically Adjusting Decoding Hypeparameters
 
+- 优势： 测试时处理，训练完RM后，可以直接应用于模型；
+- 劣势：RM的泛化性
+
+---
+
 - Before/after decoding， 在解码之前根据prompt分配算力，或者解码之后根据模型表现决定后续运算。
-  - Early Stopping （after）
-  - Budget Prediction & Allocation （before）
+  - Early Stopping
+  - Budget Prediction & Allocation
+
+- 优势： 利用先验知识预先确定算力；使用历史经验（privious questions or current answers） 预测后续动作算力分配；
+- 劣势： 往往需要大量资源采集先验知识；（博哥被喷的点）
+
+---
 
 - Architecture Methods
   - Implicit Inference
   - recurrent transformers
   - 非自回归解码策略
 
+
+- 优势：
+- 劣势：
+
 *System-1/2 ？*
 
+---
+- RL based to alleviate length bias
+  - SimPO
 
 
 ## Pruning while Decoding

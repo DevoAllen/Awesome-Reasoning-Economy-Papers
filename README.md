@@ -3,20 +3,20 @@
 
 - [Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models](#harnessing-the-inference-economy-a-survey-of-efficient-reasoning-for-large-language-models)
     - [Introduction](#introduction)
-    - [▶️ I: Refineing Post-training Methods for Efficient Reasoning](#️-i-refineing-post-training-methods-for-efficient-reasoning)
-      - [I-i: Fault Identification and Analysis](#i-i-fault-identification-and-analysis)
-        - [For SFT stage](#for-sft-stage)
-        - [For RL stage](#for-rl-stage)
-      - [I-ii: (Mitigating) Solutions](#i-ii-mitigating-solutions)
-        - [For SFT stage](#for-sft-stage-1)
-        - [For RL stage](#for-rl-stage-1)
-    - [▶️ II: Refineing Test-time Methods for Efficient Reasoning](#️-ii-refineing-test-time-methods-for-efficient-reasoning)
-      - [II-i: Fault Identification and Analysis](#ii-i-fault-identification-and-analysis)
+    - [▶️ 1   Refineing Post-training Methods for Efficient Reasoning](#️-1-refineing-post-training-methods-for-efficient-reasoning)
+      - [1.1     Fault Identification and Analysis](#11---fault-identification-and-analysis)
+        - [1.1.1  For SFT stage](#111for-sft-stage)
+        - [1.1.2  For RL stage](#112for-rl-stage)
+      - [1.2     (Mitigating) Solutions](#12---mitigating-solutions)
+        - [1.2.1  For SFT stage](#121for-sft-stage)
+        - [1.2.2  For RL stage](#122for-rl-stage)
+    - [▶️ 2    Refineing Test-time Methods for Efficient Reasoning](#️-2--refineing-test-time-methods-for-efficient-reasoning)
+      - [2.1     Fault Identification and Analysis](#21---fault-identification-and-analysis)
         - [The cause of computation waste](#the-cause-of-computation-waste)
-      - [II-ii: (Mitigating) Solutions](#ii-ii-mitigating-solutions)
-        - [Budget Prediction \& Allocation before Decoding](#budget-prediction--allocation-before-decoding)
-        - [Adaptive Budget Allocation During Decoding](#adaptive-budget-allocation-during-decoding)
-    - [▶️ III: Post-training Calibrated with Inference Algorithm](#️-iii-post-training-calibrated-with-inference-algorithm)
+      - [2.2    (Mitigating) Solutions](#22--mitigating-solutions)
+        - [2.2.1    Budget Prediction \& Allocation before Decoding](#221--budget-prediction--allocation-before-decoding)
+        - [2.2.2     Adaptive Budget Allocation During Decoding](#222---adaptive-budget-allocation-during-decoding)
+    - [▶️ 3     Post-training Calibrated with Inference Algorithm](#️-3---post-training-calibrated-with-inference-algorithm)
 
 
 ### Introduction
@@ -25,7 +25,7 @@ Investing in improving inference-time computation might prove more beneficial th
 
 ---
 
-### ▶️ I: Refineing Post-training Methods for Efficient Reasoning
+### ▶️ 1&nbsp;&nbsp; Refineing Post-training Methods for Efficient Reasoning
 
 
 目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking现象，从而导致大型语言模型LLMs的输出结果存在潜在问题。其中，较为突出的算法所引发的长度偏差（length-bias），该问题会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
@@ -37,27 +37,35 @@ Investing in improving inference-time computation might prove more beneficial th
 
 因此，先前工作提出使用多种方法来尝试解决。
 
-#### I-i: Fault Identification and Analysis
+#### 1.1&nbsp;&nbsp;   Fault Identification and Analysis
 
 
-##### For SFT stage
+##### 1.1.1&nbsp;&nbsp;For SFT stage
 
-##### For RL stage
+##### 1.1.2&nbsp;&nbsp;For RL stage
 
 
-- [A Long Way to Go: Investigating Length Correlations in RLHF]()
+- [A Long Way to Go: Investigating Length Correlations in RLHF](https://arxiv.org/abs/2310.03716v2)
+  - 发现PPO中length bias十分严重，现有RM只能识别浅层人类偏好，如长度
+  - 如果限制PPO采样出的文本长度和SFT的数据集长度类似，那么PPO的优势消失了。
+  - 只用长度作为优势，也能取得和PPO类似性能
+
 
 （对于R1系列模型的RL，有哪些观察？）
 
 
 
-#### I-ii: (Mitigating) Solutions
+#### 1.2&nbsp;&nbsp;   (Mitigating) Solutions
 
-##### For SFT stage
+##### 1.2.1&nbsp;&nbsp;For SFT stage
 
-##### For RL stage
+##### 1.2.2&nbsp;&nbsp;For RL stage
+- [A Long Way to Go: Investigating Length Correlations in RLHF](https://arxiv.org/abs/2310.03716v2)
+  - 设置高的KL loss，cut掉超出限度的rollout，设置长度相关的reward
 - [Disentangling Length from Quality in Direct Preference Optimization](http://arxiv.org/abs/2403.19159)
-- [SimPO: Simple Preference Optimization with a Reference-Free Reward]()
+  - DPO中，loss中加一个长度正则
+- [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://arxiv.org/abs/2405.14734)
+  - 主要是针对DPO的改进，去掉reference，加上长度正则
 - [Loose lips sink ships: Mitigating Length Bias in Reinforcement Learning from Human Feedback]()
 - [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
 - [ODIN: Disentangled Reward Mitigates Hacking in RLHF](http://arxiv.org/abs/2402.07319)
@@ -66,27 +74,49 @@ Investing in improving inference-time computation might prove more beneficial th
 
 ---
 
-### ▶️ II: Refineing Test-time Methods for Efficient Reasoning
+### ▶️ 2&nbsp;&nbsp;  Refineing Test-time Methods for Efficient Reasoning
 
-#### II-i: Fault Identification and Analysis
+#### 2.1&nbsp;&nbsp;   Fault Identification and Analysis
 
 ##### The cause of computation waste
 - [Mind Your Step (by Step): Chain-of-Thought can Reduce Performance on Tasks where Thinking Makes Humans Worse]()
 
-#### II-ii: (Mitigating) Solutions
+#### 2.2&nbsp;&nbsp;  (Mitigating) Solutions
 
-##### Budget Prediction & Allocation before Decoding
+##### 2.2.1&nbsp;&nbsp;  Budget Prediction & Allocation before Decoding
+
+**Direct Prediction**
+
 - [Token-Budget-Aware LLM Reasoning]()
+
+
+**Difficulty-aware Prediction**
 - [Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning](http://arxiv.org/abs/2408.13457)
 
-##### Adaptive Budget Allocation During Decoding
+
+
+
+##### 2.2.2 &nbsp;&nbsp;  Adaptive Budget Allocation During Decoding
+
+随着推理进行，在搜索过程中进行剪枝、early stop等操作。
+
+**Early Stopping**
 - [Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation](https://arxiv.org/abs/2410.02725)
+  - self-evaluation判断early stop
+  
 - [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](http://arxiv.org/abs/2401.10480)
+  - 答案的consistency判断early stop
+
+**Pruning while Searching**
 - [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
+  - RM剪枝
+
 
 ---
 
-### ▶️ III: Post-training Calibrated with Inference Algorithm
+### ▶️ 3&nbsp;&nbsp;   Post-training Calibrated with Inference Algorithm
+
+设计post-training方法，并有配合的解码算法，实现efficient reasoning。
 
 - [Learning How Hard to Think: Input-Adaptive Allocation of LM Computation](http://arxiv.org/abs/2410.04707)
 - [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)

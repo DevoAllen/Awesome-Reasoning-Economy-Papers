@@ -1,213 +1,95 @@
-# A survey of Efficient Thinking for Long Thought Large Language Models： From Decoding
-
-## 备选题目方案
-
-### candidates
-1. Towards Efficient Reasoning in Large Language Models: A Comprehensive Survey of Adaptive Inference Strategies
-   
-2. Thinking Smart, Not Hard: A Review of Computation-Aware Reasoning in Large Language Models
-
-3. The Inference Economy: A Review of Computation-Aware Reasoning in Large Language Models
-
-4. Maximizing the Inference Economy: A Survey of Computationally Efficient Reasoning in Large Language Models
-
-5. The Inference Economy of Complex Reasoning: A Systematic Review of Efficient Thinking in Large Language Models
-    
-6. Harnessing the Inference Economy: Efficient Thinking for Large Language Models
-
-7. Efficient Reasoning in the Inference Economy: Adaptive Computation for Large Language Models
-
-8. The Inference Economy: Adaptive Strategies for Efficient Reasoning in Large Language Models
-
-### good parts  
-1. Thinking Smart, Not Hard
-2. Inference Economy
-3. Computation-Aware or efficient
-4. Efficient Thinking
-5. optimal
+# Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models
 
 
-## 1. Test-time Scaling
-
-### 1.1 Benefits of TTS
-test-time scaling 带来了明显的性能增长，无需训练。
-Recent advances in inference-time techniques demonstrate the potential to enhance LLM reasoning without additional training by exploring intermediate steps during inference. 
-test-time 方法
-- Sequential Methods
-    - critique and refine
-    - Other prompting methods：
-      - tot
-      - got
-      - 
-
-- Parallel Methods
-    - Beam Search
-    - Best-of-N
-    - Self-consistency
-
-提高模型精度。
-**paper（1）性能提升**
-
-### 1.2 Why Efficient Thinking?
-TTS方法要付出大量的算力，但很多时候付出的算力不一定带来性能提升。
-**paper（2）算力开销计算**
-**paper（4）模型能力分析，能力内，能力间，能力外**
-
-算力浪费方式
-（1）
-（2）
-
-尤其是，**paper（3）系列发现模型推理存在算力分配不合理**，即在固定算力下，简单题目，算力分配过多，造成算力浪费；困难题目，算力分配不足，导致模型无法充分探索解题可能性，影响性能。
-
-**theory supports: Human Thinking Paradigm (Dual-Process Theory - System 1 & System 2)**
-
-因此，一些paper希望动态分配算力，实现精度提升的同时，尽可能节省算力。
-意义：
-- 吞吐量
-- 经济
-- carbon footprint
-
-## Adaptive Computation Methods分类
-
-按照动机分类
-是否用prior知识？
-
-分小类别优势 / 劣势
+- [Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models](#harnessing-the-inference-economy-a-survey-of-efficient-reasoning-for-large-language-models)
+    - [Introduction](#introduction)
+    - [▶️ I: Refineing Post-training Methods for Efficient Reasoning](#️-i-refineing-post-training-methods-for-efficient-reasoning)
+      - [I-i: Fault Identification and Analysis](#i-i-fault-identification-and-analysis)
+        - [For SFT stage](#for-sft-stage)
+        - [For RL stage](#for-rl-stage)
+      - [I-ii: (Mitigating) Solutions](#i-ii-mitigating-solutions)
+        - [For SFT stage](#for-sft-stage-1)
+        - [For RL stage](#for-rl-stage-1)
+    - [▶️ II: Refineing Test-time Methods for Efficient Reasoning](#️-ii-refineing-test-time-methods-for-efficient-reasoning)
+      - [II-i: Fault Identification and Analysis](#ii-i-fault-identification-and-analysis)
+        - [The cause of computation waste](#the-cause-of-computation-waste)
+      - [II-ii: (Mitigating) Solutions](#ii-ii-mitigating-solutions)
+        - [Budget Prediction \& Allocation before Decoding](#budget-prediction--allocation-before-decoding)
+        - [Adaptive Budget Allocation During Decoding](#adaptive-budget-allocation-during-decoding)
+    - [▶️ III: Post-training Calibrated with Inference Algorithm](#️-iii-post-training-calibrated-with-inference-algorithm)
 
 
-- Mid/During decoding 在解码过程中动态调整，防止算力浪费。
-  - Pruning while Decoding
-  - Dynamically Adjusting Decoding Hypeparameters
+### Introduction
+Investing in improving inference-time computation might prove more beneficial than increasing model pre-training compute.
 
-- 优势： 测试时处理，训练完RM后，可以直接应用于模型；
-- 劣势：RM的泛化性
 
 ---
 
-- Before/after decoding， 在解码之前根据prompt分配算力，或者解码之后根据模型表现决定后续运算。
-  - Early Stopping
-  - Budget Prediction & Allocation
+### ▶️ I: Refineing Post-training Methods for Efficient Reasoning
 
-- 优势： 利用先验知识预先确定算力；使用历史经验（privious questions or current answers） 预测后续动作算力分配；
-- 劣势： 往往需要大量资源采集先验知识；（博哥被喷的点）
+
+目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking现象，从而导致大型语言模型LLMs的输出结果存在潜在问题。其中，较为突出的算法所引发的长度偏差（length-bias），该问题会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
+
+因此一些工作尝试对这些现象进行分析。
+
+最近，R1等以长推理（long reasoning）为重点的模型，推理能力很强，但是模型输出文本长度冗长。
+无论是针对简单问题还是复杂问题，模型的回复相比于通用模型，均呈现出显著的冗长性。
+
+因此，先前工作提出使用多种方法来尝试解决。
+
+#### I-i: Fault Identification and Analysis
+
+
+##### For SFT stage
+
+##### For RL stage
+
+
+- [A Long Way to Go: Investigating Length Correlations in RLHF]()
+
+（对于R1系列模型的RL，有哪些观察？）
+
+
+
+#### I-ii: (Mitigating) Solutions
+
+##### For SFT stage
+
+##### For RL stage
+- [Disentangling Length from Quality in Direct Preference Optimization](http://arxiv.org/abs/2403.19159)
+- [SimPO: Simple Preference Optimization with a Reference-Free Reward]()
+- [Loose lips sink ships: Mitigating Length Bias in Reinforcement Learning from Human Feedback]()
+- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
+- [ODIN: Disentangled Reward Mitigates Hacking in RLHF](http://arxiv.org/abs/2402.07319)
+
+（对于R1系列模型的RL，有什么解决办法？）
 
 ---
 
-- Architecture Methods
-  - Implicit Inference
-  - recurrent transformers
-  - 非自回归解码策略
+### ▶️ II: Refineing Test-time Methods for Efficient Reasoning
 
+#### II-i: Fault Identification and Analysis
 
-- 优势：
-- 劣势：
+##### The cause of computation waste
+- [Mind Your Step (by Step): Chain-of-Thought can Reduce Performance on Tasks where Thinking Makes Humans Worse]()
 
-*System-1/2 ？*
+#### II-ii: (Mitigating) Solutions
+
+##### Budget Prediction & Allocation before Decoding
+- [Token-Budget-Aware LLM Reasoning]()
+- [Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning](http://arxiv.org/abs/2408.13457)
+
+##### Adaptive Budget Allocation During Decoding
+- [Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation](https://arxiv.org/abs/2410.02725)
+- [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](http://arxiv.org/abs/2401.10480)
+
 
 ---
-- RL based to alleviate length bias
-  - SimPO
 
+### ▶️ III: Post-training Calibrated with Inference Algorithm
 
-## Pruning while Decoding
-
-
-## implicit inference
-https://arxiv.org/pdf/2311.01460
-
-https://arxiv.org/pdf/2405.14838v1
-
-https://arxiv.org/pdf/2412.06769
-
-
-## 6. Architecture Methods
-1. MLA
-2. MOE
-3. recurrent transformers
-4. reasoning in continuous space
-5. 非自回归解码策略
-
-
-
-## 8. Early Stop
-
-**主要思想是先做，做得好了就停，别浪费。**
-
-<a href = "https://arxiv.org/abs/2410.02725"> Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation</a>
-
-训练模型自己确认每一次完成推理后，是否需要再来一次。
-
-
-<a href = "https://arxiv.org/abs/2401.10480"> Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning</a>
-early stop 的self-consistency，training-free。只要一个窗口里面所有答案都一致，那么后续就不再采样。
-
-
-
-## 9. Budget Prediction & Allocation
-
-**主要思想是根据先验确定模型推理该问题需要的最优预算，再根据该预算直接进行推理。**
-
-
-<a href = "https://arxiv.org/abs/2408.03314">Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a>
-
-想权衡下分配在test和post-train阶段的算力；并且提出模型**根据难度**不同分配其最优的算力。
-
-<a href = "https://arxiv.org/abs/2410.04707">LEARNING HOW HARD TO THINK: INPUT-ADAPTIVE ALLOCATION OF LM COMPUTATION</a>
-
-使用线性规划，指定算力和请求后，找出最大奖励的算力分配
-
-
-<a href = "https://arxiv.org/abs/2408.13457">Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning</a>
-
-**根据难度**，调整不同问题的self-consistency窗口大小
-
-
-<a href = "https://arxiv.org/abs/2412.18547">Token-Budget-Aware LLM Reasoning</a>
-
-比较新的一个。prompt告诉token预算，但是精度有损失多。
-
-
-## 10. System1/2协作框架 Dual-Process Theory (System 1/2)
-
-**主要思想是大的LLM解决难问题，小的解决简单问题。system 1 & system2**
-
-
-<a href = "https://arxiv.org/abs/2407.13692">Prover-Verifier Games improve legibility of LLM outputs</a>
-主要针对可读性，但是文中提了length-bias问题。
-
-
-<a href = "https://arxiv.org/abs/2410.04707">LEARNING HOW HARD TO THINK: INPUT-ADAPTIVE ALLOCATION OF LM COMPUTATION</a>
-
-
-
-该工作也考虑了大小模型协作。
-
-
-## 11. RL
-
-Length-bias等系列算法
-
-<a href = "https://arxiv.org/abs/2405.14734">SimPO: Simple Preference Optimization with a Reference-Free Reward</a>
-
-Long2short
-
-<a href = "https://arxiv.org/abs/2501.12599">KIMI K1.5: SCALING REINFORCEMENT LEARNING WITH LLMS</a>
-
-
-
-## 12. 其他
-
-<a href = "https://aclanthology.org/2024.emnlp-main.1112/">Reasoning in Token Economies: Budget-Aware Evaluation of LLM Reasoning Strategies</a>
-
-提出评估prompt方法效果时，要将其放在同一算力成本下考虑。
-
-<a href = "https://arxiv.org/abs/2403.02419">Are More LLM Calls All You Need? Towards Scaling Laws of Compound Inference Systems</a>
-
-考虑难度，不是所有的问题best-of-n都能带来更好的性能
-
-
-
-## Future Directions
-
+- [Learning How Hard to Think: Input-Adaptive Allocation of LM Computation](http://arxiv.org/abs/2410.04707)
+- [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)
+- [Adaptive Decoding via Latent Preference Optimization](https://arxiv.org/abs/2411.09661)
 
 

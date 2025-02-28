@@ -82,7 +82,7 @@ Investing in improving inference-time computation might prove more beneficial th
 ##### Adaptive Budget Allocation During Decoding
 - [Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation](https://arxiv.org/abs/2410.02725)
 - [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](http://arxiv.org/abs/2401.10480)
-
+- [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
 
 ---
 

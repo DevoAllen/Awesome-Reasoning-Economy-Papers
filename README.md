@@ -33,9 +33,10 @@ Investing in improving inference-time computation might prove more beneficial th
 因此一些工作尝试对这些现象进行分析。
 
 - fake alignment / reward hacking
-  - length bias: 算法所引发的**length-bias**，会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
-  - All that glitters is not gold: good reasoning style, bad performance, Fake reasoning abilities alignment
+  - **length bias**: 算法所引发的**length-bias**，会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
+  - **Reasoning is only skin-deep/ shallow thinking** : good reasoning style, bad performance, Fake reasoning abilities alignment
 
+(self-refinement相关工作也发现了这种情况，有refine行为，但是没有refine的实质)
 
 最近，R1等以长推理（long reasoning）为重点的模型，推理能力很强，但是模型输出文本长度冗长。
 无论是针对简单问题还是复杂问题，模型的回复相比于通用模型，均呈现出显著的冗长性。

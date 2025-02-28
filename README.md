@@ -28,9 +28,14 @@ Investing in improving inference-time computation might prove more beneficial th
 ### ▶️ 1&nbsp;&nbsp; Refineing Post-training Methods for Efficient Reasoning
 
 
-目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking现象，从而导致大型语言模型LLMs的输出结果存在潜在问题。其中，较为突出的算法所引发的长度偏差（length-bias），该问题会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
+目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking现象，从而导致大型语言模型LLMs的输出结果存在潜在问题。
 
 因此一些工作尝试对这些现象进行分析。
+
+- fake alignment / reward hacking
+  - length bias: 算法所引发的**length-bias**，会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
+  - All that glitters is not gold: good reasoning style, bad performance, Fake reasoning abilities alignment
+
 
 最近，R1等以长推理（long reasoning）为重点的模型，推理能力很强，但是模型输出文本长度冗长。
 无论是针对简单问题还是复杂问题，模型的回复相比于通用模型，均呈现出显著的冗长性。
@@ -52,7 +57,9 @@ Investing in improving inference-time computation might prove more beneficial th
 
 
 （对于R1系列模型的RL，有哪些观察？）
-
+- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
+  - Long2short RL，model merge，DPO...
+- (其他复现报告，增长的length)
 
 
 #### 1.2&nbsp;&nbsp;   (Mitigating) Solutions
@@ -67,10 +74,13 @@ Investing in improving inference-time computation might prove more beneficial th
 - [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://arxiv.org/abs/2405.14734)
   - 主要是针对DPO的改进，去掉reference，加上长度正则
 - [Loose lips sink ships: Mitigating Length Bias in Reinforcement Learning from Human Feedback]()
-- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
 - [ODIN: Disentangled Reward Mitigates Hacking in RLHF](http://arxiv.org/abs/2402.07319)
 
+
 （对于R1系列模型的RL，有什么解决办法？）
+- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
+  - Long2short RL，model merge，DPO...
+
 
 ---
 

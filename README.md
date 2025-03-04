@@ -17,6 +17,10 @@
         - [2.2.1    Budget Prediction \& Allocation before Decoding](#221--budget-prediction--allocation-before-decoding)
         - [2.2.2     Adaptive Budget Allocation During Decoding](#222---adaptive-budget-allocation-during-decoding)
     - [▶️ 3     Post-training Calibrated with Inference Algorithm](#️-3---post-training-calibrated-with-inference-algorithm)
+    - [▶️ 4     Emerging Frontiers in Efficient Reasoning](#️-4---emerging-frontiers-in-efficient-reasoning)
+      - [4.1    Chain-of-Thought Compression](#41--chain-of-thought-compression)
+      - [4.2    System-1 and System-2 Cooperation](#42--system-1-and-system-2-cooperation)
+      - [4.2    Recurrent Depth Reasoning](#42--recurrent-depth-reasoning)
 
 
 ### Introduction
@@ -125,6 +129,7 @@ Investing in improving inference-time computation might prove more beneficial th
   - RM剪枝
 
 
+
 ---
 
 ### ▶️ 3&nbsp;&nbsp;   Post-training Calibrated with Inference Algorithm
@@ -135,6 +140,31 @@ Investing in improving inference-time computation might prove more beneficial th
 - [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)
 - [Adaptive Decoding via Latent Preference Optimization](https://arxiv.org/abs/2411.09661)
 
+
+### ▶️ 4&nbsp;&nbsp;   Emerging Frontiers in Efficient Reasoning
+
+
+
+
+#### 4.1&nbsp;&nbsp;  Chain-of-Thought Compression
+
+**Explicit Compression**
+
+**Implicit Compression**
+
+
+#### 4.2&nbsp;&nbsp;  System-1 and System-2 Cooperation
+
+**同架构模型协作**
+
+Speculative Decoding
+
+Model Routing
+
+**异架构模型协作**
+
+
+#### 4.2&nbsp;&nbsp;  Recurrent Depth Reasoning
 
 
 ---

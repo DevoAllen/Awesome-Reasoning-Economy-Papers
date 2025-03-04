@@ -20,6 +20,8 @@
 
 
 ### Introduction
+
+
 Investing in improving inference-time computation might prove more beneficial than increasing model pre-training compute.
 
 
@@ -28,7 +30,7 @@ Investing in improving inference-time computation might prove more beneficial th
 ### ▶️ 1&nbsp;&nbsp; Refineing Post-training Methods for Efficient Reasoning
 
 
-目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking现象，从而导致大型语言模型LLMs的输出结果存在潜在问题。
+目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking / fake alignment现象，从而导致LLMs的推理过程存在问题。
 
 因此一些工作尝试对这些现象进行分析。
 
@@ -127,10 +129,14 @@ Investing in improving inference-time computation might prove more beneficial th
 
 ### ▶️ 3&nbsp;&nbsp;   Post-training Calibrated with Inference Algorithm
 
-设计post-training方法，并有配合的解码算法，实现efficient reasoning。
+设计post-training方法，并有配合的inference算法，实现efficient reasoning。
 
 - [Learning How Hard to Think: Input-Adaptive Allocation of LM Computation](http://arxiv.org/abs/2410.04707)
 - [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)
 - [Adaptive Decoding via Latent Preference Optimization](https://arxiv.org/abs/2411.09661)
+
+
+
+---
 
 

@@ -2,17 +2,15 @@
 
 
 - [Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models](#harnessing-the-inference-economy-a-survey-of-efficient-reasoning-for-large-language-models)
-    - [Introduction](#introduction)
-    - [▶️ 1   Refineing Post-training Methods for Efficient Reasoning](#️-1-refineing-post-training-methods-for-efficient-reasoning)
-      - [1.1     Fault Identification and Analysis](#11---fault-identification-and-analysis)
-        - [1.1.1  For SFT stage](#111for-sft-stage)
-        - [1.1.2  For RL stage](#112for-rl-stage)
-      - [1.2     (Mitigating) Solutions](#12---mitigating-solutions)
-        - [1.2.1  For SFT stage](#121for-sft-stage)
-        - [1.2.2  For RL stage](#122for-rl-stage)
+    - [▶️ 1   Post-training Methods for Efficient Thinking reasoning LLMs](#️-1-post-training-methods-for-efficient-thinking-reasoning-llms)
+      - [1.1     Post-training Induced Inefficiency](#11---post-training-induced-inefficiency)
+        - [Length-bias](#length-bias)
+        - [Deceptive Behaviors](#deceptive-behaviors)
+      - [1.2  Mitigating Solutions](#12mitigating-solutions)
+        - [Length-bias Alleviation](#length-bias-alleviation)
+        - [Deceptive Behaviors Alleviation](#deceptive-behaviors-alleviation)
     - [▶️ 2    Refineing Test-time Methods for Efficient Reasoning](#️-2--refineing-test-time-methods-for-efficient-reasoning)
-      - [2.1     Fault Identification and Analysis](#21---fault-identification-and-analysis)
-        - [The cause of computation waste](#the-cause-of-computation-waste)
+      - [2.1     Test-time Methods Induced Inefficiency](#21---test-time-methods-induced-inefficiency)
       - [2.2    (Mitigating) Solutions](#22--mitigating-solutions)
         - [2.2.1    Budget Prediction \& Allocation before Decoding](#221--budget-prediction--allocation-before-decoding)
         - [2.2.2     Adaptive Budget Allocation During Decoding](#222---adaptive-budget-allocation-during-decoding)
@@ -20,92 +18,120 @@
     - [▶️ 4     Emerging Frontiers in Efficient Reasoning](#️-4---emerging-frontiers-in-efficient-reasoning)
       - [4.1    Chain-of-Thought Compression](#41--chain-of-thought-compression)
       - [4.2    System-1 and System-2 Cooperation](#42--system-1-and-system-2-cooperation)
-      - [4.2    Recurrent Depth Reasoning](#42--recurrent-depth-reasoning)
+      - [4.3    Recurrent Depth Reasoning](#43--recurrent-depth-reasoning)
 
 
-### Introduction
+
+### ▶️ 1&nbsp;&nbsp; Post-training Methods for Efficient Thinking reasoning LLMs
+
+RL optimization often relies on reward models (RMs) that are inherently imperfect, primarily due to unreliable human preference annotations. Additionally, Goodhart’s Law states, “When a measure becomes a target, it ceases to be a good measure.” Consequently, over-optimizing based on these flawed RMs can negatively impact the overall capabilities of LLMs.
+
+This situation highlights the risk of reward hacking, where models exploit the reward function to achieve high scores without genuinely aligning with human preferences. 
+As a result, LLMs may exhibit **Superficial Alignment**, appearing to meet human expectations while lacking true understanding.
+
+#### 1.1&nbsp;&nbsp;   Post-training Induced Inefficiency
+
+##### Length-bias
+LLMs trained with RL tend to **produce longer responses** compared to those trained through SFT.
+
+- **[A Long Way to Go: Investigating Length Correlations in RLHF](https://openreview.net/forum?id=G8LaO1P0xv#discussion)** 
+- **[Fine-grained human feedback gives better rewards for language model training](https://dl.acm.org/doi/abs/10.5555/3666122.3668696)** 
+- **[Learning to summarize from human feedback](https://dl.acm.org/doi/10.5555/3495724.3495977)** 
 
 
-Investing in improving inference-time computation might prove more beneficial than increasing model pre-training compute.
+**❗️&nbsp;&nbsp;Findings  of Overly Cautious / Overthinking reasoning LLMs**
+
+Reasoning LLMs exhibit excessive unnecessary verification and redundant reasoning on easy-to-handle questions, leading to inefficient token usage and increased computational costs.
+
+- **[When More is Less: Understanding Chain-of-Thought Length in LLMs](https://arxiv.org/abs/2502.07266)**
+- **[The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](https://arxiv.org/abs/2502.08235)**
+- **[Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](https://arxiv.org/abs/2412.21187)**
+- **[The Impact of Reasoning Step Length on Large Language Models](https://aclanthology.org/2024.findings-acl.108/)**
+- **[Concise Thoughts: Impact of Output Length on LLM Reasoning and Cost](https://arxiv.org/abs/2407.19825)**
 
 
----
 
-### ▶️ 1&nbsp;&nbsp; Refineing Post-training Methods for Efficient Reasoning
-
-
-目前，研究普遍认为，在Reinforcement Learning from Human Feedback, RLHF阶段，可能会出现reward hacking / fake alignment现象，从而导致LLMs的推理过程存在问题。
-
-因此一些工作尝试对这些现象进行分析。
-
-- fake alignment / reward hacking
-  - **length bias**: 算法所引发的**length-bias**，会导致模型输出文本的长度不断增加，而其中的有用信息含量却相对较低。
-  - **Reasoning is only skin-deep/ shallow thinking** : good reasoning style, bad performance, Fake reasoning abilities alignment
-
-(self-refinement相关工作也发现了这种情况，有refine行为，但是没有refine的实质)
-
-最近，R1等以长推理（long reasoning）为重点的模型，推理能力很强，但是模型输出文本长度冗长。
-无论是针对简单问题还是复杂问题，模型的回复相比于通用模型，均呈现出显著的冗长性。
-
-因此，先前工作提出使用多种方法来尝试解决。
-
-#### 1.1&nbsp;&nbsp;   Fault Identification and Analysis
+##### Deceptive Behaviors
 
 
-##### 1.1.1&nbsp;&nbsp;For SFT stage
-
-##### 1.1.2&nbsp;&nbsp;For RL stage
+- Fake Alignment: Are LLMs Really Aligned Well?
 
 
-- [A Long Way to Go: Investigating Length Correlations in RLHF](https://arxiv.org/abs/2310.03716v2)
-  - 发现PPO中length bias十分严重，现有RM只能识别浅层人类偏好，如长度
-  - 如果限制PPO采样出的文本长度和SFT的数据集长度类似，那么PPO的优势消失了。
-  - 只用长度作为优势，也能取得和PPO类似性能
+**❗️&nbsp;&nbsp;Findings of Fake Thinking reasoning LLMs**
+Deceptive Behavior is even harder to detect than length bias.
+Previous research has demonstrated that LLMs may display differential behaviors across various demographic groups \cite{fake-align-1}, thereby raising concerns regarding the authenticity and fairness of their alignment with human values.
+
+- [When Can LLMs Actually Correct Their Own Mistakes? A Critical Survey of Self-Correction of LLMs]
+- 
+#### 1.2&nbsp;&nbsp;Mitigating Solutions
+
+##### Length-bias Alleviation
+Disentangling the length and quality reward.
+
+Length reward penalty (kl divergense, length penal).
+
+Length preference optimization, (DPO, preference partial pair reconstruction).
+- [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://openreview.net/forum?id=3Tzcot1LKb)
+- 
+**✨&nbsp;&nbsp;Overly Cautious / Overthinking reasoning LLMs**
+Emerging research papers for reasoning LLMs
+
+- [Self-Training Elicits Concise Reasoning in Large Language Models](https://arxiv.org/abs/2502.20122)
+  - self-training for long2short
+- [O1-Pruner: Length-Harmonizing Fine-Tuning for O1-Like Reasoning Pruning](https://arxiv.org/abs/2501.12570)
+- 
+##### Deceptive Behaviors Alleviation
 
 
-（对于R1系列模型的RL，有哪些观察？）
-- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
-  - Long2short RL，model merge，DPO...
-- (其他复现报告，增长的length)
+**✨&nbsp;&nbsp;Fake Thinking reasoning LLMs**
 
 
-#### 1.2&nbsp;&nbsp;   (Mitigating) Solutions
 
-##### 1.2.1&nbsp;&nbsp;For SFT stage
+**✨&nbsp;&nbsp; For Both of Them**
 
-##### 1.2.2&nbsp;&nbsp;For RL stage
-- [A Long Way to Go: Investigating Length Correlations in RLHF](https://arxiv.org/abs/2310.03716v2)
-  - 设置高的KL loss，cut掉超出限度的rollout，设置长度相关的reward
-- [Disentangling Length from Quality in Direct Preference Optimization](http://arxiv.org/abs/2403.19159)
-  - DPO中，loss中加一个长度正则
-- [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://arxiv.org/abs/2405.14734)
-  - 主要是针对DPO的改进，去掉reference，加上长度正则
-- [Loose lips sink ships: Mitigating Length Bias in Reinforcement Learning from Human Feedback]()
-- [ODIN: Disentangled Reward Mitigates Hacking in RLHF](http://arxiv.org/abs/2402.07319)
-
-
-（对于R1系列模型的RL，有什么解决办法？）
-- [Kimi k1.5: Scaling Reinforcement Learning with LLMs]()
-  - Long2short RL，model merge，DPO...
+- [Training Language Models to Reason Efficiently]
+  - 训练模型根据难度分配算力
+- Token-Budget-Aware LLM Reasoning
 
 
 ---
 
 ### ▶️ 2&nbsp;&nbsp;  Refineing Test-time Methods for Efficient Reasoning
 
-#### 2.1&nbsp;&nbsp;   Fault Identification and Analysis
+#### 2.1&nbsp;&nbsp;   Test-time Methods Induced Inefficiency
 
-##### The cause of computation waste
-- [Mind Your Step (by Step): Chain-of-Thought can Reduce Performance on Tasks where Thinking Makes Humans Worse]()
+**解析test-time算法，探究哪些因素导致test-time算法造成计算资源浪费。**
+
+sequential inference: self-refine何时停止？
+- [Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models](https://aclanthology.org/2024.acl-long.818/)
+
+parallel inference: 采样窗口太大 / 太小，导致计算资源浪费；
+- [Are More LLM Calls All You Need? Towards Scaling Laws of Compound Inference Systems](https://proceedings.neurips.cc/paper_files/paper/2024/hash/51173cf34c5faac9796a47dc2fdd3a71-Abstract-Conference.html)
+- [Cerberus: Efficient Inference with Adaptive Parallel Decoding and Sequential Knowledge Enhancement](https://arxiv.org/abs/2410.13344)
+
+search 过程中：
+- inter-sample
+  1. 简单题过度探索
+  2. 难题探索不足
+- intra-sample
+  1. 无效探索
+  2. 过度探索
+   
+- [Mind Your Step (by Step): Chain-of-Thought can Reduce Performance on Tasks where Thinking Makes Humans Worse](https://arxiv.org/abs/2410.21333)
+- [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
 
 #### 2.2&nbsp;&nbsp;  (Mitigating) Solutions
+
+**针对以上对test-time算法造成的计算资源浪费，如何改进？**
 
 ##### 2.2.1&nbsp;&nbsp;  Budget Prediction & Allocation before Decoding
 
 **Direct Prediction**
 
 - [Token-Budget-Aware LLM Reasoning]()
-
+- [s1: Simple test-time scaling]()
+- [Following Length Constraints in Instructions]
+- [Concise Thoughts: Impact of Output Length on LLM Reasoning and Cost]
 
 **Difficulty-aware Prediction**
 - [Make Every Penny Count: Difficulty-Adaptive Self-Consistency for Cost-Efficient Reasoning](http://arxiv.org/abs/2408.13457)
@@ -124,49 +150,114 @@ Investing in improving inference-time computation might prove more beneficial th
 - [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](http://arxiv.org/abs/2401.10480)
   - 答案的consistency判断early stop
 
+- [Let’s Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](https://aclanthology.org/2023.emnlp-main.761/)
+
+
 **Pruning while Searching**
 - [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
   - RM剪枝
-
+- [Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations](https://aclanthology.org/2024.acl-long.510/)
+- [OVM, Outcome-supervised Value Models for Planning in Mathematical Reasoning](https://aclanthology.org/2024.findings-naacl.55/)
 
 
 ---
 
 ### ▶️ 3&nbsp;&nbsp;   Post-training Calibrated with Inference Algorithm
 
-设计post-training方法，并有配合的inference算法，实现efficient reasoning。
+Design post-training methods, along with corresponding inference algorithms, to achieve efficient reasoning.
+
 
 - [Learning How Hard to Think: Input-Adaptive Allocation of LM Computation](http://arxiv.org/abs/2410.04707)
 - [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)
+- [BOND: Aligning LLMs with Best-of-N Distillation](https://arxiv.org/abs/2407.14622)
+  - 训练对齐BoN，不需要测试时使用完全版BoN，减少开销
 - [Adaptive Decoding via Latent Preference Optimization](https://arxiv.org/abs/2411.09661)
+  - 训练：预测每个token需要的温度
+  - 推理：使用训练后的温度预测器确定每个token使用的温度
+- [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](https://arxiv.org/abs/2503.04697)
+  - 训练：LCPO，训练中两个奖励：accuracy，和满足prompt中长度
+  - 推理：prompt指定推理长度
 
 
 ### ▶️ 4&nbsp;&nbsp;   Emerging Frontiers in Efficient Reasoning
 
 
-
-
 #### 4.1&nbsp;&nbsp;  Chain-of-Thought Compression
 
+压缩cot，缩短推理长度。
+
+
 **Explicit Compression**
+- [TokenSkip: Controllable Chain-of-Thought Compression in LLMs]
+  - 跳过不关键token
+- [Stepwise Perplexity-Guided Refinement for Efficient Chain-of-Thought Reasoning in Large Language Models]
+  - 跳过不关键步骤，专注关键步骤
 
 **Implicit Compression**
-
+- [Think before you speak: Training Language Models With Pause Tokens]
+- [Training Large Language Models to Reason in a Continuous Latent Space]
+- [From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step]
+- [Implicit Chain of Thought Reasoning via Knowledge Distillation]
+- [SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs]
+- [LightThinker: Thinking Step-by-Step Compression]
+- 
 
 #### 4.2&nbsp;&nbsp;  System-1 and System-2 Cooperation
+
+尽管prover，verifer的模型也可以称作双模型合作，但此处我们特指双prover的合作
 
 **同架构模型协作**
 
 Speculative Decoding
+- [JUDGE DECODING: FASTER SPECULATIVE SAMPLING REQUIRES GOING BEYOND MODEL ALIGNMENT]
+- [Speculative Decoding with Big Little Decoder]
+- [MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning]
+- [Reward-Guided Speculative Decoding for Efficient LLM Reasoning]
 
 Model Routing
+1. sample level routing
+     - [System-1.x: Learning to Balance Fast and Slow Planning with Language Models]
+     - [Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models]
+     - [DynaThink: Fast or Slow? A Dynamic Decision-Making Framework for Large Language Models]
+  
+2. token level routing
+     - [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing]
+  
 
 **异架构模型协作**
+too few
 
 
-#### 4.2&nbsp;&nbsp;  Recurrent Depth Reasoning
+**Distill System 2 to System 1**
+
+同构（大transformer蒸馏到小transformer）
+- [deepseek-r1]()
+  - deepseekdistilled qwen
+- [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023)
+
+异构（高复杂度的transformer，蒸馏到低复杂度模型mamba）
+transformer蒸馏到mamba
+- [Thinking Slow, Fast: Scaling Inference Compute with Distilled Reasoners](https://arxiv.org/abs/2502.20339)
+
+#### 4.3&nbsp;&nbsp;  Recurrent Depth Reasoning
+1. 推理中模型深度很重要
+   - [Physics of Language Models: Part 2.1]
+     - Language model depth is crucial for mathematical reasoning.
+   - [What Can Transformer Learn with Varying Depth? Case Studies on Sequence Learning Tasks]
+     - 模型不同深度学习能力不同，即使参数相同
+2. 小模型重复使用其中某些层，实现深度推理
+   - [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach]
+   - [Enhancing Auto-regressive Chain-of-Thought through Loop-Aligned Reasoning]
+
+3. 这样训练、推理开销都小
+4. 也可以跳过transformer某些不重要的层
+   - [Not All Layers of LLMs Are Necessary During Inference](https://arxiv.org/abs/2403.02181)
 
 
 ---
+
+
+
+
 
 

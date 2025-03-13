@@ -188,19 +188,19 @@ Design post-training methods, along with corresponding inference algorithms, to 
 
 
 **Explicit Compression**
-- [TokenSkip: Controllable Chain-of-Thought Compression in LLMs]
+- [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](https://arxiv.org/abs/2502.12067.pdf)
   - 跳过不关键token
-- [Stepwise Perplexity-Guided Refinement for Efficient Chain-of-Thought Reasoning in Large Language Models]
+- [Stepwise Perplexity-Guided Refinement for Efficient Chain-of-Thought Reasoning in Large Language Models](https://arxiv.org/abs/2502.13260.pdf)
   - 跳过不关键步骤，专注关键步骤
 
 **Implicit Compression**
-- [Think before you speak: Training Language Models With Pause Tokens]
-- [Training Large Language Models to Reason in a Continuous Latent Space]
-- [From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step]
-- [Implicit Chain of Thought Reasoning via Knowledge Distillation]
-- [SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs]
-- [LightThinker: Thinking Step-by-Step Compression]
-- 
+- [Think before you speak: Training Language Models With Pause Tokens] `do not think this is relevant`
+- [SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs](https://arxiv.org/abs/2502.12134.pdf)
+- [LightThinker: Thinking Step-by-Step Compression](https://arxiv.org/pdf/2502.15589.pdf)
+- [Compressed chain of thought: Efficient reasoning through dense representations.](https://arxiv.org/pdf/2412.13171.pdf)
+- [Training Large Language Models to Reason in a Continuous Latent Space](https://arxiv.org/pdf/2412.06769.pdf)
+- [From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step](https://arxiv.org/abs/2405.14838.pdf)
+- [Implicit Chain of Thought Reasoning via Knowledge Distillation](https://arxiv.org/abs/2311.01460.pdf)
 
 #### 4.2&nbsp;&nbsp;  System-1 and System-2 Cooperation
 

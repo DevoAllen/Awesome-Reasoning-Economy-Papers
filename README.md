@@ -208,7 +208,10 @@ Design post-training methods, along with corresponding inference algorithms, to 
 
 **同架构模型协作**
 
-Speculative Decoding
+## Multi-Model Collaboration
+
+### Speculative Decoding
+
 - [JUDGE DECODING: FASTER SPECULATIVE SAMPLING REQUIRES GOING BEYOND MODEL ALIGNMENT](https://arxiv.org/pdf/2501.19309.pdf)
 - [Reward-Guided Speculative Decoding for Efficient LLM Reasoning](https://arxiv.org/pdf/2501.19324.pdf)
 - [MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning](https://arxiv.org/abs/2409.12147.pdf) `also not very suitable here`
@@ -217,14 +220,20 @@ Speculative Decoding
 - [Speculative Decoding with Big Little Decoder](https://arxiv.org/pdf/2302.07863.pdf)
 - [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/pdf/2211.17192.pdf)
 
-Model Routing
-1. sample level routing
-     - [System-1.x: Learning to Balance Fast and Slow Planning with Language Models]
-     - [Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models]
-     - [DynaThink: Fast or Slow? A Dynamic Decision-Making Framework for Large Language Models]
+### Multi-model Workflow
+
+- [Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models](https://arxiv.org/pdf/2402.02563.pdf)
+
+## Single-Model Collaboration
+
+### Sample Level Routing
+
+- [System-1.x: Learning to Balance Fast and Slow Planning with Language Models](https://arxiv.org/pdf/2407.14414.pdf)
+- [DynaThink: Fast or Slow? A Dynamic Decision-Making Framework for Large Language Models](https://aclanthology.org/2024.emnlp-main.814/)
   
-2. token level routing
-     - [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing]
+### Token Level Routing
+     
+- [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing](https://arxiv.org/pdf/2502.01976.pdf)
   
 
 **异架构模型协作**

@@ -222,18 +222,14 @@ Design post-training methods, along with corresponding inference algorithms, to 
 
 ### Multi-model Workflow
 
+- [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing](https://arxiv.org/pdf/2502.01976.pdf)
+- [SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390.pdf)
 - [Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models](https://arxiv.org/pdf/2402.02563.pdf)
 
-## Single-Model Collaboration
-
-### Sample Level Routing
+## Single-Model Routing
 
 - [System-1.x: Learning to Balance Fast and Slow Planning with Language Models](https://arxiv.org/pdf/2407.14414.pdf)
 - [DynaThink: Fast or Slow? A Dynamic Decision-Making Framework for Large Language Models](https://aclanthology.org/2024.emnlp-main.814/)
-  
-### Token Level Routing
-     
-- [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing](https://arxiv.org/pdf/2502.01976.pdf)
   
 
 **异架构模型协作**

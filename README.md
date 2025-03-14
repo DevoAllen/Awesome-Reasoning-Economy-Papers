@@ -240,13 +240,13 @@ too few
 **Distill System 2 to System 1**
 
 同构（大transformer蒸馏到小transformer）
-- [deepseek-r1]()
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948.pdf)
   - deepseekdistilled qwen
-- [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023)
+- [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023.pdf)
 
 异构（高复杂度的transformer，蒸馏到低复杂度模型mamba）
 transformer蒸馏到mamba
-- [Thinking Slow, Fast: Scaling Inference Compute with Distilled Reasoners](https://arxiv.org/abs/2502.20339)
+- [Thinking Slow, Fast: Scaling Inference Compute with Distilled Reasoners](https://arxiv.org/abs/2502.20339.pdf)
 
 #### 4.3&nbsp;&nbsp;  Recurrent Depth Reasoning
 1. 推理中模型深度很重要

@@ -209,10 +209,13 @@ Design post-training methods, along with corresponding inference algorithms, to 
 **同架构模型协作**
 
 Speculative Decoding
-- [JUDGE DECODING: FASTER SPECULATIVE SAMPLING REQUIRES GOING BEYOND MODEL ALIGNMENT]
-- [Speculative Decoding with Big Little Decoder]
-- [MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning]
-- [Reward-Guided Speculative Decoding for Efficient LLM Reasoning]
+- [JUDGE DECODING: FASTER SPECULATIVE SAMPLING REQUIRES GOING BEYOND MODEL ALIGNMENT](https://arxiv.org/pdf/2501.19309.pdf)
+- [Reward-Guided Speculative Decoding for Efficient LLM Reasoning](https://arxiv.org/pdf/2501.19324.pdf)
+- [MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning](https://arxiv.org/abs/2409.12147.pdf) `also not very suitable here`
+- [Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding](https://aclanthology.org/2024.findings-acl.456.pdf)
+- [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](https://aclanthology.org/2023.findings-emnlp.257/)
+- [Speculative Decoding with Big Little Decoder](https://arxiv.org/pdf/2302.07863.pdf)
+- [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/pdf/2211.17192.pdf)
 
 Model Routing
 1. sample level routing

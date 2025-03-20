@@ -12,27 +12,27 @@
 ## 📒 Table of Contents
 
 - [Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models](#harnessing-the-inference-economy-a-survey-of-efficient-reasoning-for-large-language-models)
-    - [1. Post-training Methods for Efficient Thinking reasoning LLMs](#️-1-post-training-methods-for-efficient-thinking-reasoning-llms)
-      - [1.1 Post-training Induced Inefficiency](#11---post-training-induced-inefficiency)
+    - [1 Post-training Methods for Efficient Thinking reasoning LLMs](#1-post-training-methods-for-efficient-thinking-reasoning-llms)
+      - [1.1 Post-training Induced Inefficiency](#11-post-training-induced-inefficiency)
         - [Length-bias](#length-bias)
         - [Deceptive Behaviors](#deceptive-behaviors)
       - [1.2 Mitigating Solutions](#12mitigating-solutions)
         - [Length-bias Alleviation](#length-bias-alleviation)
         - [Deceptive Behaviors Alleviation](#deceptive-behaviors-alleviation)
-    - [2. Refineing Test-time Methods for Efficient Reasoning](#️-2--refineing-test-time-methods-for-efficient-reasoning)
+    - [2 Refining Test-time Methods for Efficient Reasoning](#2-refineing-test-time-methods-for-efficient-reasoning)
       - [2.1 Test-time Methods Induced Inefficiency](#21---test-time-methods-induced-inefficiency)
       - [2.2 (Mitigating) Solutions](#22--mitigating-solutions)
         - [2.2.1 Budget Prediction \& Allocation before Decoding](#221--budget-prediction--allocation-before-decoding)
         - [2.2.2     Adaptive Budget Allocation During Decoding](#222---adaptive-budget-allocation-during-decoding)
-    - [3. Post-training Calibrated with Inference Algorithm](#️-3---post-training-calibrated-with-inference-algorithm)
-    - [4. Emerging Frontiers in Efficient Reasoning](#️-4---emerging-frontiers-in-efficient-reasoning)
-      - [4.1 Chain-of-Thought Compression](#41--chain-of-thought-compression)
-      - [4.2 System-1 and System-2 Cooperation](#42--system-1-and-system-2-cooperation)
-      - [4.3 Recurrent Depth Reasoning](#43--recurrent-depth-reasoning)
+    - [3 Post-training Calibrated with Inference Algorithm](#3-post-training-calibrated-with-inference-algorithm)
+    - [4 Emerging Frontiers in Efficient Reasoning](#4-emerging-frontiers-in-efficient-reasoning)
+      - [4.1 Chain-of-Thought Compression](#41-chain-of-thought-compression)
+      - [4.2 System-1 and System-2 Cooperation](#42-system-1-and-system-2-cooperation)
+      - [4.3 Recurrent Depth Reasoning](#43-recurrent-depth-reasoning)
 
 
 
-### 1. Post-training Methods for Efficient Thinking reasoning LLMs
+### 1 Post-training Methods for Efficient Thinking reasoning LLMs
 
 RL optimization often relies on reward models (RMs) that are inherently imperfect, primarily due to unreliable human preference annotations. Additionally, Goodhart’s Law states, “When a measure becomes a target, it ceases to be a good measure.” Consequently, over-optimizing based on these flawed RMs can negatively impact the overall capabilities of LLMs.
 

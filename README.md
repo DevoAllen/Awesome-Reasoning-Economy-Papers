@@ -30,7 +30,9 @@
       - [4.2 System-1 and System-2 Cooperation](#42-system-1-and-system-2-cooperation)
       - [4.3 Recurrent Depth Reasoning](#43-recurrent-depth-reasoning)
 
+### Surveys
 
+- [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](https://arxiv.org/pdf/2503.16419)
 
 ### 1 Post-training Methods for Efficient Thinking reasoning LLMs
 

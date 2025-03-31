@@ -300,7 +300,7 @@
 **Evaluation Metrics and Benchmarks**
 - [Scaling Evaluation-time Compute with Reasoning Models as Process Evaluators](https://arxiv.org/pdf/2503.19877.pdf)
 - [PhD Knowledge Not Required: A Reasoning Challenge for Large Language Models](https://arxiv.org/abs/2502.01584)
-
+- [DNA Bench: When Silence is Smarter -- Benchmarking Over-Reasoning in Reasoning LLMs](https://arxiv.org/abs/2503.15793)
 
 
 

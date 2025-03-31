@@ -72,6 +72,8 @@
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948) 
 - [Kimi k1.5: Scaling Reinforcement Learning with LLMs](https://arxiv.org/abs/2501.12599)
 - [ReFT: Reasoning with Reinforced Fine-Tuning](https://arxiv.org/abs/2401.08967)
+- [Let's Verify Step by Step](https://arxiv.org/abs/2305.20050)
+- [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
 
 #### 1.2 &nbsp;Test-time Methods for Reasoning LLMs
 
@@ -153,8 +155,10 @@
 ### ▶️ 3&nbsp;&nbsp; Optimization for Reasoning Economy *part-1: Post-training*
 #### 3.1 &nbsp;&nbsp; Data
 - [s1: Simple test-time scaling](http://arxiv.org/abs/2501.19393)
-- [O1 Replication Journey: A Strategic Progress Report -- Part 1]()
+- [O1 Replication Journey: A Strategic Progress Report -- Part 1](https://arxiv.org/abs/2410.18982)
 - [LIMA: Less Is More for Alignment](http://arxiv.org/abs/2305.11206)
+- [LIMR: Less is More for RL Scaling](https://arxiv.org/abs/2502.11886)
+  
 
 #### 3.2 &nbsp;&nbsp; Algorithm
 

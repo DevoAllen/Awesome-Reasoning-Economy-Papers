@@ -267,7 +267,7 @@
 - [Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling](https://arxiv.org/abs/2408.17017)
 - [Efficient Test-Time Scaling via Self-Calibration](https://arxiv.org/abs/2503.00031)
 
-**Pruning while Searching**
+**Pruning While Searching**
 - [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
 - [Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations](https://aclanthology.org/2024.acl-long.510/)
 - [Path-Consistency: Prefix Enhancement for Efficient Inference in LLM](https://arxiv.org/abs/2409.01281)
@@ -279,30 +279,34 @@
 - [s1: Simple test-time scaling](http://arxiv.org/abs/2501.19393)
 - [Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs](http://arxiv.org/abs/2501.18585)
 - [Large Language Models Cannot Self-Correct Reasoning Yet](https://openreview.net/forum?id=IkmD3fKBPQ)
-- [CRITIC: Large Language Models Can Self-Correct with ToolInteractive Critiquing](https://arxiv.org/abs/2305.11738)
+- [CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://arxiv.org/abs/2305.11738)
 
 ---
 ### ▶️ 5&nbsp;&nbsp; Discussion 
 
 **Efficient Multi-modal Reasoning**
+- [MME-CoT: Benchmarking Chain-of-Thought in Large Multimodal Models for Reasoning Quality, Robustness, and Efficiency](https://arxiv.org/abs/2502.09621)
+- [Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?](https://arxiv.org/abs/2503.06252)
 - [Video-R1: Reinforcing Video Reasoning in MLLMs](https://arxiv.org/abs/2503.21776)
 - [R1-vl: Learning to reason with multimodal large language models via step-wise group relative policy optimization](https://arxiv.org/abs/2503.12937)
 - [LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL](https://arxiv.org/abs/2503.07536)
 - [Mulberry: Empowering MLLM with o1-like Reasoning and Reflection via Collective Monte Carlo Tree Search](https://arxiv.org/abs/2412.18319)
+- [Efficient Multimodal Large Language Models: A Survey](https://arxiv.org/abs/2405.10739)
 - [LLaVA-UHD: an LMM Perceiving Any Aspect Ratio and High-Resolution Images](https://arxiv.org/abs/2403.11703)
 
 **Efficient Agentic Reasoning**
 
 - [ATLAS: Agent Tuning via Learning Critical Steps](https://arxiv.org/pdf/2503.02197.pdf)
 - [ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks](https://arxiv.org/abs/2503.02390.pdf)
+- [Large Reasoning Models in Agent Scenarios: Exploring the Necessity of Reasoning Capabilities](https://arxiv.org/abs/2503.11074)
 - [The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](https://arxiv.org/abs/2502.08235)
 
 **Evaluation Metrics and Benchmarks**
 - [Scaling Evaluation-time Compute with Reasoning Models as Process Evaluators](https://arxiv.org/pdf/2503.19877.pdf)
 - [PhD Knowledge Not Required: A Reasoning Challenge for Large Language Models](https://arxiv.org/abs/2502.01584)
 - [DNA Bench: When Silence is Smarter -- Benchmarking Over-Reasoning in Reasoning LLMs](https://arxiv.org/abs/2503.15793)
-
-
+- [Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs](https://arxiv.org/abs/2501.18585)
+- [Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](https://arxiv.org/abs/2405.10739)
 
 **Explaniabilty of Reasoning LLMs**
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html#related-work)

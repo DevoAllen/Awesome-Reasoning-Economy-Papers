@@ -49,14 +49,19 @@
 #### 1.1 &nbsp;Post-training Methods for Reasoning LLMs
 - [From System 1 to System 2: A Survey of Reasoning Large Language Models](http://arxiv.org/abs/2502.17419)
 - [A Survey on Post-training of Large Language Models](http://arxiv.org/abs/2503.06072)
-  
+- [LLM Post-Training: A Deep Dive into Reasoning Large Language Models](https://arxiv.org/abs/2502.21321)
+
+
 **Supervised Finetuning**
 - [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465)
 - [LIMA: Less Is More for Alignment](http://arxiv.org/abs/2305.11206)
+- [LIMR: Less is More for RL Scaling](https://arxiv.org/abs/2502.11886)
 - [s1: Simple test-time scaling](http://arxiv.org/abs/2501.19393)
 - [Large Language Models Can Self-Improve](https://aclanthology.org/2023.emnlp-main.67/)
 - [Improving Language Model Reasoning with Self-motivated Learning](https://aclanthology.org/2024.lrec-main.774/)
 - [Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/abs/2109.01652)
+- [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
+- [Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains](https://openreview.net/forum?id=JtGPIZpOrz)
 
 **Reinforcement Learning**
 - [Proximal Policy Optimization Algorithms](http://arxiv.org/abs/1707.06347)
@@ -66,7 +71,7 @@
 - [QwQ: Reflect Deeply on the Boundaries of the Unknown](https://qwenlm.github.io/blog/qwq-32b/)
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948) 
 - [Kimi k1.5: Scaling Reinforcement Learning with LLMs](https://arxiv.org/abs/2501.12599)
-
+- [ReFT: Reasoning with Reinforced Fine-Tuning](https://arxiv.org/abs/2401.08967)
 
 #### 1.2 &nbsp;Test-time Methods for Reasoning LLMs
 

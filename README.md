@@ -285,12 +285,17 @@
 ### ▶️ 5&nbsp;&nbsp; Discussion 
 
 **Efficient Multi-modal Reasoning**
-
+- [Video-R1: Reinforcing Video Reasoning in MLLMs](https://arxiv.org/abs/2503.21776)
+- [R1-vl: Learning to reason with multimodal large language models via step-wise group relative policy optimization](https://arxiv.org/abs/2503.12937)
+- [LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL](https://arxiv.org/abs/2503.07536)
+- [Mulberry: Empowering MLLM with o1-like Reasoning and Reflection via Collective Monte Carlo Tree Search](https://arxiv.org/abs/2412.18319)
+- [LLaVA-UHD: an LMM Perceiving Any Aspect Ratio and High-Resolution Images](https://arxiv.org/abs/2403.11703)
 
 **Efficient Agentic Reasoning**
 
 - [ATLAS: Agent Tuning via Learning Critical Steps](https://arxiv.org/pdf/2503.02197.pdf)
 - [ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks](https://arxiv.org/abs/2503.02390.pdf)
+- [The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](https://arxiv.org/abs/2502.08235)
 
 **Evaluation Metrics and Benchmarks**
 - [Scaling Evaluation-time Compute with Reasoning Models as Process Evaluators](https://arxiv.org/pdf/2503.19877.pdf)

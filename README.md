@@ -195,6 +195,7 @@
 - [Can Language Models Learn to Skip Steps?](https://arxiv.org/abs/2411.01855)
   
 **Implicit Compression**
+- [Anchor-based Large Language Models](https://aclanthology.org/2024.findings-acl.295/)
 - [Think before you speak: Training Language Models With Pause Tokens](https://openreview.net/forum?id=ph04CRkPdC)
 - [Training Large Language Models to Reason in a Continuous Latent Space](https://arxiv.org/abs/2412.06769)
 - [From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step](https://arxiv.org/abs/2405.14838)

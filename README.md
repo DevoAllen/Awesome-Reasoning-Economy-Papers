@@ -78,6 +78,7 @@
 - [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
 - [Critique-out-Loud Reward Models](https://arxiv.org/abs/2408.11791)
 - [DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](https://arxiv.org/abs/2405.14333)
+- [Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement](https://arxiv.org/abs/2409.12122)
 
 #### 1.2 &nbsp;Test-time Methods for Reasoning LLMs
 

@@ -334,11 +334,11 @@ If you find this work useful, welcome to cite us.
 <!-- omit in toc -->
 ## ⭐ Star History
 
-<a href="https://www.star-history.com/#DevoAllen/EfficientThinking&Date">
+<a href="https://www.star-history.com/#DevoAllen/Awesome-Reasoning-Economy-Papers&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=DevoAllen/EfficientThinking&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=DevoAllen/EfficientThinking&type=Date&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=DevoAllen/EfficientThinking&type=Date&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=DevoAllen/Awesome-Reasoning-Economy-Papers&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=DevoAllen/Awesome-Reasoning-Economy-Papers&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=DevoAllen/Awesome-Reasoning-Economy-Papers&type=Date" />
  </picture>
 </a>
 

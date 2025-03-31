@@ -1,4 +1,4 @@
-# <img src="figures/productivity.png" alt="Example Figure" width="50" height="50" /> Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models
+# <img src="figures/productivity.png" alt="Example Figure" width="50" height="50" /> Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models
 
 [![arXiv](https://img.shields.io/badge/arXiv-Reasoning_Economy-b31b1b.svg)]()
 [![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
@@ -10,7 +10,7 @@
 
 <!-- omit in toc -->
 
-- [ Harnessing the Inference Economy: A Survey of Efficient Reasoning for Large Language Models](#-harnessing-the-inference-economy-a-survey-of-efficient-reasoning-for-large-language-models)
+- [ Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models](#-harnessing-the-reasoning-economy-a-survey-of-efficient-reasoning-for-large-language-models)
     - [▶️ 1   Foundation of Reasoning LLMs](#️-1-foundation-of-reasoning-llms)
       - [1.1  Post-training Methods for Reasoning LLMs](#11-post-training-methods-for-reasoning-llms)
       - [1.2  Test-time Methods for Reasoning LLMs](#12-test-time-methods-for-reasoning-llms)

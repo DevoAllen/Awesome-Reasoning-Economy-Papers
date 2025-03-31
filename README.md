@@ -297,15 +297,18 @@
 - [Video-R1: Reinforcing Video Reasoning in MLLMs](https://arxiv.org/abs/2503.21776)
 - [R1-vl: Learning to reason with multimodal large language models via step-wise group relative policy optimization](https://arxiv.org/abs/2503.12937)
 - [LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL](https://arxiv.org/abs/2503.07536)
+- [MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning](https://arxiv.org/abs/2503.07365)
+- [Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models](https://arxiv.org/abs/2503.06749)
 - [Mulberry: Empowering MLLM with o1-like Reasoning and Reflection via Collective Monte Carlo Tree Search](https://arxiv.org/abs/2412.18319)
 - [Efficient Multimodal Large Language Models: A Survey](https://arxiv.org/abs/2405.10739)
 - [LLaVA-UHD: an LMM Perceiving Any Aspect Ratio and High-Resolution Images](https://arxiv.org/abs/2403.11703)
 
 **Efficient Agentic Reasoning**
-
 - [ATLAS: Agent Tuning via Learning Critical Steps](https://arxiv.org/pdf/2503.02197.pdf)
-- [ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks](https://arxiv.org/abs/2503.02390.pdf)
 - [Large Reasoning Models in Agent Scenarios: Exploring the Necessity of Reasoning Capabilities](https://arxiv.org/abs/2503.11074)
+- [ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks](https://arxiv.org/abs/2503.02390.pdf)
+- [AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration](https://arxiv.org/abs/2503.18891)
+- [Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2410.02506)
 - [The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](https://arxiv.org/abs/2502.08235)
 
 **Evaluation Metrics and Benchmarks**

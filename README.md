@@ -277,7 +277,7 @@
 
 
 
-Benchmark & Metrics
+**Benchmark & Metrics**
 - [Scaling Evaluation-time Compute with Reasoning Models as Process Evaluators](https://arxiv.org/pdf/2503.19877.pdf)
 - [PhD Knowledge Not Required: A Reasoning Challenge for Large Language Models](https://arxiv.org/abs/2502.01584)
 
@@ -286,7 +286,7 @@ Benchmark & Metrics
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html#related-work)
 - [Circuit Tracing: Revealing Computational Graphs in Language Models](https://transformer-circuits.pub/2025/attribution-graphs/methods.html)
 
-Agentic Reasoning
+**Agentic Reasoning**
 
 - [ATLAS: Agent Tuning via Learning Critical Steps](https://arxiv.org/pdf/2503.02197.pdf)
 - [ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks](https://arxiv.org/abs/2503.02390.pdf)

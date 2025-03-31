@@ -50,7 +50,7 @@
 - [From System 1 to System 2: A Survey of Reasoning Large Language Models](http://arxiv.org/abs/2502.17419)
 - [A Survey on Post-training of Large Language Models](http://arxiv.org/abs/2503.06072)
 - [LLM Post-Training: A Deep Dive into Reasoning Large Language Models](https://arxiv.org/abs/2502.21321)
-
+- [A Survey of Efficient Reasoning for Large Reasoning Models: Language, Multimodality, and Beyond](https://arxiv.org/html/2503.21614v1.pdf)
 
 **Supervised Fine-tuning**
 - [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774)

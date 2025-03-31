@@ -52,7 +52,7 @@
 - [LLM Post-Training: A Deep Dive into Reasoning Large Language Models](https://arxiv.org/abs/2502.21321)
 
 
-**Supervised Finetuning**
+**Supervised Fine-tuning**
 - [GPT-4 Technical Report](https://arxiv.org/abs/2303.08774)
 - [Stanford Alpaca: An Instruction-following LLaMA Model](https://github.com/tatsu-lab/stanford_alpaca)
 - [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465)

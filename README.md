@@ -76,6 +76,7 @@
 - [ReFT: Reasoning with Reinforced Fine-Tuning](https://arxiv.org/abs/2401.08967)
 - [Let's Verify Step by Step](https://arxiv.org/abs/2305.20050)
 - [Training Verifiers to Solve Math Word Problems](https://arxiv.org/abs/2110.14168)
+- [Critique-out-Loud Reward Models](https://arxiv.org/abs/2408.11791)
 
 #### 1.2 &nbsp;Test-time Methods for Reasoning LLMs
 

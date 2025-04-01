@@ -1,7 +1,7 @@
 # <img src="figures/productivity.png" alt="Example Figure" width="50" height="50" /> Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models
 
 [![arXiv](https://img.shields.io/badge/arXiv-Reasoning_Economy-b31b1b.svg)](https://arxiv.org/abs/2503.24377)
-[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)]()
+[![Contribution Welcome](https://img.shields.io/badge/Contributions-welcome-blue)](https://github.com/DevoAllen/Awesome-Reasoning-Economy-Papers/issues/2)
 
 <!-- omit in toc -->
 ## 📢 Updates

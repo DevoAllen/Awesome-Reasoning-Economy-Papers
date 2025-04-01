@@ -205,7 +205,7 @@
 - [SoftCoT: Soft Chain-of-Thought for Efficient Reasoning with LLMs](https://arxiv.org/abs/2502.12134)
 - [LightThinker: Thinking Step-by-Step Compression](https://arxiv.org/abs/2502.15589)
 - [Token Assorted: Mixing Latent and Text Tokens for Improved Language Model Reasoning](https://arxiv.org/abs/2502.03275)
-
+- [Think Before Recommend: Unleashing the Latent Reasoning Power for Sequential Recommendation](https://arxiv.org/abs/2503.22675)
 
 #### 3.3 &nbsp;&nbsp; Architecture
 ##### 3.3.1 &nbsp;&nbsp; System-1 and System-2 Cooperation

@@ -328,7 +328,15 @@
 ## Citation
 If you find this work useful, welcome to cite us.
 ```bib
-
+@misc{wang2025harnessingreasoningeconomysurvey,
+      title={Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models}, 
+      author={Rui Wang and Hongru Wang and Boyang Xue and Jianhui Pang and Shudong Liu and Yi Chen and Jiahao Qiu and Derek Fai Wong and Heng Ji and Kam-Fai Wong},
+      year={2025},
+      eprint={2503.24377},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.24377}, 
+}
 ```
 
 <!-- omit in toc -->

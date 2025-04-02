@@ -195,6 +195,7 @@
 - [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](https://arxiv.org/abs/2502.12067)
 - [Stepwise Perplexity-Guided Refinement for Efficient Chain-of-Thought Reasoning in Large Language Models](https://arxiv.org/abs/2502.13260)
 - [Can Language Models Learn to Skip Steps?](https://arxiv.org/abs/2411.01855)
+- [InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models](https://arxiv.org/abs/2503.06692)
   
 **Implicit Compression**
 - [Anchor-based Large Language Models](https://aclanthology.org/2024.findings-acl.295/)

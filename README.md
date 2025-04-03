@@ -172,6 +172,7 @@
 
 ##### 3.2.1 &nbsp;&nbsp; Long2short RL
 
+- [THINKPRUNE: Pruning Long Chain-of-Thought of LLMs via Reinforcement Learning](https://arxiv.org/pdf/2504.01296.pdf)
 - [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://openreview.net/forum?id=3Tzcot1LKb)
 - [A Long Way to Go: Investigating Length Correlations in RLHF](https://openreview.net/forum?id=G8LaO1P0xv#discussion)
 - [Disentangling Length from Quality in Direct Preference Optimization](https://aclanthology.org/2024.findings-acl.297/)

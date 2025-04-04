@@ -292,6 +292,13 @@
 - [Large Language Models Cannot Self-Correct Reasoning Yet](https://openreview.net/forum?id=IkmD3fKBPQ)
 - [CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://arxiv.org/abs/2305.11738)
 
+**Early Exiting (token level)**
+- [Depth-adaptive transformer](https://arxiv.org/abs/1910.10073)
+- [Confident adaptive language modeling](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6fac9e316a4ae75ea244ddcef1982c71-Abstract-Conference.html)
+- [Fast and robust early-exiting framework for autoregressive language models with synchronized parallel decoding](https://arxiv.org/abs/2310.05424)
+- [Investigating acceleration of LLaMA inference by enabling intermediate layer decoding via instruction tuning with 'LITE'] (https://aclanthology.org/2024.findings-naacl.232/)
+- [Fast yet Safe: Early-Exiting with Risk Control](https://arxiv.org/abs/2405.20915)
+
 ---
 ### ▶️ 5&nbsp;&nbsp; Discussion 
 

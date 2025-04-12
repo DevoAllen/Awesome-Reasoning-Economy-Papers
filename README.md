@@ -66,6 +66,10 @@
 - [Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/abs/2109.01652)
 - [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
 - [Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains](https://openreview.net/forum?id=JtGPIZpOrz)
+- [Abstract Meaning Representation-Based Logic-Driven Data Augmentation for Logical Reasoning](https://aclanthology.org/2024.findings-acl.353/)
+- [Multi-Step Deductive Reasoning Over Natural Language: An Empirical Study on Out-of-Distribution Generalisation](https://arxiv.org/abs/2207.14000)
+- [AbductionRules: Training Transformers to Explain Unexpected Inputs](https://aclanthology.org/2022.findings-acl.19/)
+- [ChatLogic: Integrating Logic Programming with Large Language Models for Multi-step Reasoning](https://openreview.net/forum?id=AOqGF7Po7Z)
 
 **Reinforcement Learning**
 - [Proximal Policy Optimization Algorithms](http://arxiv.org/abs/1707.06347)
@@ -314,6 +318,7 @@
 - [AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration](https://arxiv.org/abs/2503.18891)
 - [Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2410.02506)
 - [The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks](https://arxiv.org/abs/2502.08235)
+- [Exploring Iterative Enhancement for Improving Learnersourced Multiple-Choice Question Explanations with Large Language Models](http://arxiv.org/abs/2309.10444)
 
 **Evaluation Metrics and Benchmarks**
 - [Scaling Evaluation-time Compute with Reasoning Models as Process Evaluators](https://arxiv.org/pdf/2503.19877.pdf)
@@ -321,6 +326,8 @@
 - [DNA Bench: When Silence is Smarter -- Benchmarking Over-Reasoning in Reasoning LLMs](https://arxiv.org/abs/2503.15793)
 - [Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs](https://arxiv.org/abs/2501.18585)
 - [Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](https://arxiv.org/abs/2405.10739)
+- [Assessing and Enhancing the Robustness of Large Language Models with Task Structure Variations for Logical Reasoning](https://arxiv.org/abs/2310.09430)
+- [Large Language Models Are Not Strong Abstract Reasoners](https://arxiv.org/abs/2305.19555)
 
 **Explaniabilty of Reasoning LLMs**
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html#related-work)

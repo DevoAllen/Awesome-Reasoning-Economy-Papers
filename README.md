@@ -5,7 +5,7 @@
 
 <!-- omit in toc -->
 ## 📢 Updates
-
+- **2025.05**: We have updated the related work discussed in the [special issue](https://github.com/DevoAllen/Awesome-Reasoning-Economy-Papers/issues/2) to this repo. These updates will be formally integrated into the next version of paper. We warmly welcome any discussions or feedback.
 - **2025.03**: We released a github repo to record papers related with reasoning economy. Feel free to cite or open pull requests.
 
 <!-- omit in toc -->
@@ -226,7 +226,8 @@
 - [DynaThink: Fast or Slow? A Dynamic Decision-Making Framework for Large Language Models](https://aclanthology.org/2024.emnlp-main.814/)
 - [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing](http://arxiv.org/abs/2502.01976)
 - [Unlocking Efficient Long-to-Short LLM Reasoning with Model Merging](http://arxiv.org/abs/2503.20641)
-
+- [MasRouter: Learning to Route LLMs for Multi-Agent Systems](https://arxiv.org/abs/2502.11133)
+  
 **Knowledge Distillation**
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948)
 - [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023)
@@ -268,6 +269,7 @@
 - [Adaptive Decoding via Latent Preference Optimization](https://arxiv.org/abs/2411.09661)
 - [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](http://arxiv.org/abs/2408.03314)
 - [Flaming-hot Initiation with Regular Execution Sampling for Large Language Models](https://doi.org/10.48550/arXiv.2410.21236)
+
 ##### 4.2.2 &nbsp;&nbsp; Adaptive Budget Allocation During Decoding
 
 **Early Stopping**
@@ -277,6 +279,7 @@
 - [Sampling-Efficient Test-Time Scaling: Self-Estimating the Best-of-N Sampling in Early Decoding](https://arxiv.org/abs/2503.01422)
 - [Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling](https://arxiv.org/abs/2408.17017)
 - [Efficient Test-Time Scaling via Self-Calibration](https://arxiv.org/abs/2503.00031)
+- [Reasoning Without Self-Doubt: More Efficient Chain-of-Thought Through Certainty Probing](https://openreview.net/pdf?id=wpK4IMJfdX)
 
 **Pruning While Searching**
 - [Enhancing LLM Reasoning with Reward-guided Tree Search](https://arxiv.org/abs/2411.11694)
@@ -285,6 +288,8 @@
 - [Self-Evaluation Guided Beam Search for Reasoning](https://arxiv.org/abs/2305.00633)
 - [OVM, Outcome-supervised Value Models for Planning in Mathematical Reasoning](https://aclanthology.org/2024.findings-naacl.55/)
 - [Fast Best-of-N Decoding via Speculative Rejection](https://arxiv.org/abs/2410.20290)
+- [SpecReason: Fast and Accurate Inference-Time Compute via Speculative Reasoning](https://arxiv.org/abs/2504.07891)
+- [START: Self-taught Reasoner with Tools](https://arxiv.org/abs/2503.04625)
   
 **Constrained Decoding**
 - [s1: Simple test-time scaling](http://arxiv.org/abs/2501.19393)

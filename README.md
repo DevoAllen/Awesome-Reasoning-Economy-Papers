@@ -242,7 +242,8 @@
 - [Not All Layers of LLMs Are Necessary During Inference](https://arxiv.org/abs/2403.02181)
 - [LaCo: Large Language Model Pruning via Layer Collapse](https://aclanthology.org/2024.findings-emnlp.372/)
 - [Can Looped Transformers Learn to Implement Multi-step Gradient Descent for In-context Learning?](https://arxiv.org/abs/2410.08292)
-
+- [Fast yet Safe: Early-Exiting with Risk Control](https://proceedings.neurips.cc/paper_files/paper/2024/hash/ea5a63f7ddb82e58623693fd1f4933f7-Abstract-Conference.html)
+- [Fast and robust early-exiting framework for autoregressive language models with synchronized parallel decoding](https://aclanthology.org/2023.emnlp-main.362/)
 
 
 ---
@@ -326,6 +327,7 @@
 - [DNA Bench: When Silence is Smarter -- Benchmarking Over-Reasoning in Reasoning LLMs](https://arxiv.org/abs/2503.15793)
 - [Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs](https://arxiv.org/abs/2501.18585)
 - [Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](https://arxiv.org/abs/2405.10739)
+- [Assessing and Enhancing the Robustness of Large Language Models with Task Structure Variations for Logical Reasoning](https://arxiv.org/abs/2310.09430)
 
 **Explaniabilty of Reasoning LLMs**
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html#related-work)

@@ -181,7 +181,7 @@
 - [Do NOT Think That Much for 2+3=? On the Overthinking of o1-Like LLMs](https://arxiv.org/abs/2412.21187)
 - [Self-Training Elicits Concise Reasoning in Large Language Models](https://arxiv.org/abs/2502.20122)
 - [O1-Pruner: Length-Harmonizing Fine-Tuning for O1-Like Reasoning Pruning](https://arxiv.org/abs/2501.12570)
-  
+- [ConciseRL: Conciseness-Guided Reinforcement Learning for Efficient Reasoning Models](https://www.arxiv.org/abs/2505.17250)
 
 ##### 3.2.2 &nbsp;&nbsp; Adaptive Budget-aware Tuning
 - [Training Language Models to Reason Efficiently](https://arxiv.org/abs/2502.04463)
@@ -227,6 +227,7 @@
 - [CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing](http://arxiv.org/abs/2502.01976)
 - [Unlocking Efficient Long-to-Short LLM Reasoning with Model Merging](http://arxiv.org/abs/2503.20641)
 - [MasRouter: Learning to Route LLMs for Multi-Agent Systems](https://arxiv.org/abs/2502.11133)
+- [Accelerated Test-Time Scaling with Model-Free Speculative Sampling](https://arxiv.org/abs/2506.04708)
   
 **Knowledge Distillation**
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948)

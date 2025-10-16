@@ -182,7 +182,7 @@
 - [Self-Training Elicits Concise Reasoning in Large Language Models](https://arxiv.org/abs/2502.20122)
 - [O1-Pruner: Length-Harmonizing Fine-Tuning for O1-Like Reasoning Pruning](https://arxiv.org/abs/2501.12570)
 - [ConciseRL: Conciseness-Guided Reinforcement Learning for Efficient Reasoning Models](https://www.arxiv.org/abs/2505.17250)
-
+- [TFPI: Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners](https://arxiv.org/abs/2509.26226)
 ##### 3.2.2 &nbsp;&nbsp; Adaptive Budget-aware Tuning
 - [Training Language Models to Reason Efficiently](https://arxiv.org/abs/2502.04463)
 - [Token-Budget-Aware LLM Reasoning](https://arxiv.org/abs/2412.18547)
